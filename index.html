@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -20,8 +21,8 @@
            <span class="web">Web</span>Studio</a>
         <nav class="header-nav">
             <ul class="header-list list">
-                <li><a href="./index.html" class="header-link link header">Studio</a></li>
-                <li><a href="./portfolio.html" class="header-link link header port">Portfolio</a></li>
+                <li><a href="./index.html" class="header-link link header studio">Studio</a></li>
+                <li><a href="./portfolio.html" class="header-link link header">Portfolio</a></li>
                 <li><a href="" class="header-link link header">Contacts</a></li>
             </ul> 
         </nav>
@@ -48,7 +49,7 @@
         <section class="main">
             <div class="container">
                 <h1 class="main-title">EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
-                <button type="button" class="main-btn">Request our service</button> 
+                <button type="button" class="main-btn" data-modal-open>Request our service</button> 
             </div>
         </section> 
         <section class="main-sub section">
@@ -102,9 +103,21 @@
                 What we do
             </h2>
             <ul class="about-list list">
-                <li class="about-link"><img src="./img/img-1.jpg" width="370" height="294" alt="PC"></li>
-                <li class="about-link"><img src="./img/img-2.jpg" width="370" height="294" alt="note"></li>
-                <li class="about-link"><img src="./img/img-3.jpg" width="370" height="294" alt="tablet"></li>
+                <li class="about-link"><img src="./img/img-1.jpg" width="370" height="294" alt="PC">
+                <p class="about-list-text">
+                        DESKTOP APPS
+                </p>
+                </li>
+                <li class="about-link"><img src="./img/img-2.jpg" width="370" height="294" alt="note">
+                      <p class="about-list-text">
+                        Mobile APPS
+                </p>
+                </li>
+                <li class="about-link"><img src="./img/img-3.jpg" width="370" height="294" alt="tablet">
+                      <p class="about-list-text">
+                        DESIGN SOLUTIONS
+                </p>
+                </li>
             </ul>
             </div>
         </section>
@@ -326,5 +339,21 @@
             </ul>    
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="button-close" data-modal-close>
+                <svg width="30" height="30" class="button-mod-icon">
+                    <use class="" href="./img/icons.svg.svg#icon-blackcross"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+      <script src="./js/modal.js">
+
+      </script>
 </body>
 </html>
